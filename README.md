@@ -102,7 +102,7 @@ Once the contract is deployed, you can interact with it by calling all the funct
 You will want to do the following steps to run the project :-
 
 1. First of all , install the metamask wallet on Browser.
-2. Then follow the steps from this site https://docs.avax.network/build/dapp/smart-contracts/get-funds-faucet and click on button "Add subnet to wallet" to add network to metamask and then click on button "Request 2 AVAX" to add Testnet AVAX native tokens to account .
+2. Then follow the steps from this site https://docs.avax.network/build/dapp/smart-contracts/get-funds-faucet . On this site https://core.app/tools/testnet-faucet/?subnet=c&token=c choose Select Network as "Fuji (C-Chain)" , choose Select Token as "AVAX" , put Address as your metamask account address and get coupon code from this site https://guild.xyz/avalanche/avalanche-developers by passing requirements . Click on button "Add subnet to wallet" to add network to metamask and then click on button "Request 2 AVAX" to add Testnet AVAX native tokens to account .
 3. Add all files on the remix.
 4. Open "project.sol" file and in Solidity compiler section , drop-down Advanced Configurations and select EVM VERSION as "shanghai" and also tick the checkbox Enable optimization then click on the "Compile project.sol" button.
 5. In DEPLOY & RUN TRANSACTIONS section , Select ENVIRONMENT as "Injected Provider - Metamask" and select the account in which you have Testnet AVAX native tokens . Select the "Mtoken - project.sol" contract from the dropdown menu, and then click on the "Deploy" button after passing the name and symbol of token. Then confirm the transaction from metamask and now your contract is deployed .
