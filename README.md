@@ -4,12 +4,12 @@
 This Solidity program is a Module 4 Project program that demonstrates the basic syntax and functionality of the Solidity programming language and Javascript.
 ## Description
 
-This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain .The purpose of this project is to create a ERC20 token and deploy it on the Avalanche network for Degen Gaming. The smart contract should have the following functionality:
-1. Minting new tokens: The platform should be able to create new tokens and distribute them to players as rewards. Only the owner can mint tokens.
-2. Transferring tokens: Players should be able to transfer their tokens to others.
-3. Redeeming tokens: Players should be able to redeem their tokens for items in the in-game store.
-4. Checking token balance: Players should be able to check their token balance at any time.
-5. Burning tokens: Anyone should be able to burn tokens, that they own, that are no longer needed.
+This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain .The purpose of this project is to create a ERC20 token and deploy it on the Avalanche network for Degen Gaming. The smart contract have the following functionality:
+1. Minting new tokens: The platform was able to create new tokens and distribute them to players as rewards. Only the owner can mint tokens.
+2. Transferring tokens: Players was able to transfer their tokens to others.
+3. Redeeming tokens: Players was able to redeem their tokens for items in the in-game store.
+4. Checking token balance: Players was able to check their token balance at any time.
+5. Burning tokens: Anyone was able to burn tokens, that they own, that are no longer needed.
    
 This program serves as a simple and straightforward introduction to Solidity programming, and can be used as a stepping stone for more complex projects in the future.
 
