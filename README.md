@@ -9,7 +9,8 @@ This program is a simple contract written in Solidity, a programming language us
 2. Transferring tokens: Players should be able to transfer their tokens to others.
 3. Redeeming tokens: Players should be able to redeem their tokens for items in the in-game store.
 4. Checking token balance: Players should be able to check their token balance at any time.
-5. Burning tokens: Anyone should be able to burn tokens, that they own, that are no longer needed. 
+5. Burning tokens: Anyone should be able to burn tokens, that they own, that are no longer needed.
+   
 This program serves as a simple and straightforward introduction to Solidity programming, and can be used as a stepping stone for more complex projects in the future.
 
 ## Getting Started
