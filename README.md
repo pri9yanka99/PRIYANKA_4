@@ -36,10 +36,14 @@ contract Mtoken is ERC20 {
     string GOOGLES = "YOU REDEEMED GOOGLES.";
     string GUN_SKIN = "YOU REDEEMED GUN SKIN";
     string NONE = "PLEASE CHOOSE VALUE FROM ITEMS.";
+    mapping(address => string) public redeemed_items;
+    mapping(address => uint256) public count;
+
     modifier onlyOwner { 
         require (owner == msg.sender, "only owner can access");
         _;
     }
+    
     constructor(string memory name, string memory symbol) ERC20(name, symbol){} 
 
     function token_mint(address to, uint256 amount) public onlyOwner {
@@ -55,29 +59,67 @@ contract Mtoken is ERC20 {
     }
 
     function redeem_items(uint256 choice) external returns(string memory){
+        count[msg.sender]++;
         require(choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice == 5, "PLEASE CHOOSE VALUE FROM ITEMS.");
-        if(choice == 1){
-            _burn(msg.sender,200);
-            return BUNDLE;
+        if(count[msg.sender] == 1){
+            if(choice == 1){
+                redeemed_items[msg.sender] = string.concat(redeemed_items[msg.sender], "BUNDLE");
+                _burn(msg.sender,200);
+                return BUNDLE;
+            }
+            else if(choice == 2){
+                redeemed_items[msg.sender] = string.concat(redeemed_items[msg.sender], "GUN_SKIN");
+                _burn(msg.sender, 150);
+                return GUN_SKIN;
+            }
+            else if(choice == 3){
+                redeemed_items[msg.sender] = string.concat(redeemed_items[msg.sender], "SHIRT");
+                _burn(msg.sender, 100);
+                return SHIRT;
+            }
+            else if(choice == 4){
+                redeemed_items[msg.sender] = string.concat(redeemed_items[msg.sender], "PANT");
+                _burn(msg.sender, 75);
+                return PANT;
+            }
+            else if(choice == 5){
+                redeemed_items[msg.sender] = string.concat(redeemed_items[msg.sender], "GOOGLES");
+                _burn(msg.sender, 50);
+                return GOOGLES;
+            }
+            else{
+                return NONE;
+            }
         }
-        else if(choice == 2){
-            _burn(msg.sender, 150);
-            return GUN_SKIN;
-        }
-        else if(choice == 3){
-            _burn(msg.sender, 100);
-            return SHIRT;
-        }
-        else if(choice == 4){
-            _burn(msg.sender, 75);
-            return PANT;
-        }
-        else if(choice == 5){
-            _burn(msg.sender, 50);
-            return GOOGLES;
-        }
-        else{
-            return NONE;
+        else {
+            if(choice == 1){
+                redeemed_items[msg.sender] = string.concat(redeemed_items[msg.sender], " , BUNDLE");
+                _burn(msg.sender,200);
+                return BUNDLE;
+            }
+            else if(choice == 2){
+                redeemed_items[msg.sender] = string.concat(redeemed_items[msg.sender], " , GUN_SKIN");
+                _burn(msg.sender, 150);
+                return GUN_SKIN;
+            }
+            else if(choice == 3){
+                redeemed_items[msg.sender] = string.concat(redeemed_items[msg.sender], " , SHIRT");
+                _burn(msg.sender, 100);
+                return SHIRT;
+            }
+            else if(choice == 4){
+                redeemed_items[msg.sender] = string.concat(redeemed_items[msg.sender], " , PANT");
+                _burn(msg.sender, 75);
+                return PANT;
+            }
+            else if(choice == 5){
+                redeemed_items[msg.sender] = string.concat(redeemed_items[msg.sender], " , GOOGLES");
+                _burn(msg.sender, 50);
+                return GOOGLES;
+            }
+            else{
+                return NONE;
+            }
         }
     }
 
