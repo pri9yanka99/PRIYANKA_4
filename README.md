@@ -155,6 +155,6 @@ You will want to do the following steps to run the project :-
 
 ## Author
 
-GAURAV GARG
+PRIYANKA KUMARI
 STUDENT
 CHANDIGARH UNIVERSITY
